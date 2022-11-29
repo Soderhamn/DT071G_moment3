@@ -1,0 +1,15 @@
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\bin\Debug\net6.0\Moment 3.exe
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\bin\Debug\net6.0\Moment 3.deps.json
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\bin\Debug\net6.0\Moment 3.runtimeconfig.json
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\bin\Debug\net6.0\Moment 3.dll
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\bin\Debug\net6.0\Moment 3.pdb
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\Moment 3.csproj.AssemblyReference.cache
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\Moment 3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\Moment 3.AssemblyInfoInputs.cache
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\Moment 3.AssemblyInfo.cs
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\Moment 3.csproj.CoreCompileInputs.cache
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\Moment 3.dll
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\refint\Moment 3.dll
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\Moment 3.pdb
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\Moment 3.genruntimeconfig.cache
+C:\Users\marcu\Documents\MIUN\HT22\DT071G - Programmering i C#\Moment 3\Moment 3\obj\Debug\net6.0\ref\Moment 3.dll
