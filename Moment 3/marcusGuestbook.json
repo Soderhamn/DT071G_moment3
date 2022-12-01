@@ -1,0 +1,17 @@
+﻿[
+  {
+    "id": 0,
+    "authorName": "Marcus Andersson",
+    "postText": "Lorem ipsum blablabla och så vidare 1."
+  },
+  {
+    "id": 1,
+    "authorName": "Anders Marcusson",
+    "postText": "Lorem blablabla ipsum blablabla och 2 så vidare."
+  },
+  {
+    "id": 2,
+    "authorName": "Marcus Andersson",
+    "postText": "Lorem 3 ipsum blablabla och så blabla vidare."
+  }
+]

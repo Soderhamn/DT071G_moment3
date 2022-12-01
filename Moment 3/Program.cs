@@ -19,10 +19,10 @@ namespace Moment_3
             while (exit == false) //Kör loopen så länge inte användaren vill avsluta programmet
             {
                 Guestbook myGuestbook = new Guestbook("marcusGuestbook.json"); //Instansiera Guestbook och öppna marcusGuestbook.json
+                Post myPost = new Post();
                 string? pressedKey = ""; //string? för att hantera felmeddelande om possible null
                 Console.WriteLine("MARCUS GÄSTBOK!");
                 Console.WriteLine("\n \n Meny: \n\t[1] Skriv ett nytt inlägg\n\t[2] Ta bort ett inlägg \n \n\t[X] Avsluta programmet");
-
 
                 pressedKey = Console.ReadLine();
                 
@@ -31,8 +31,19 @@ namespace Moment_3
                     case "1": //Skriv nytt inlägg
                         Console.Clear(); //Rensa skärmen
                         //Fråga efter Input Nytt namn på författare + inlägg
+                        Console.WriteLine("Ange ditt namn: ");
+                        string authorName = Console.ReadLine();
+                        Console.WriteLine("Skriv ditt inlägg: ");
+                        string postText = Console.ReadLine();
 
                         //Kontrollera Input
+                        if(!String.IsNullOrEmpty(authorName) && !String.IsNullOrEmpty(postText))
+                        {
+                            myPost.setAuthorName(authorName);
+                            myPost.setPostText(postText);
+
+                            myGuestbook.newPost(myPost);
+                        }
 
                         //Spara inlägg och visa meddelande om det ELLER skriv ut felmeddelande
 
@@ -62,7 +73,7 @@ namespace Moment_3
                     break;
                 }
 
-                myGuestbook.readGuestbook();
+                myGuestbook.printPosts();
             }
         }
     }
