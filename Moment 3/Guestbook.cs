@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -28,7 +29,7 @@ namespace Moment_3
             {
                 string jsonString = File.ReadAllText(filePath);
                 this.posts = JsonSerializer.Deserialize<List<Post>>(jsonString);
-
+                //Console.WriteLine("Posts: ÄR EFTER INLADDNING " + this.posts);
             } 
             else
             {
@@ -40,7 +41,8 @@ namespace Moment_3
         {
             if(filePath != null) //Kontrollera att filsökvägen inte är null
             {
-                var jsonString = JsonSerializer.Serialize(posts); //Serialisera listan med poster
+                var jsonString = JsonSerializer.Serialize(getPosts()); //Serialisera listan med poster
+                //Console.WriteLine("Följande jsonString sparades: " + jsonString);
                 File.WriteAllText(filePath, jsonString); //Skriv jsondata till fil
                 return true; //True, metoden lyckades skriva till fil
             }
@@ -54,27 +56,36 @@ namespace Moment_3
 
         public bool printPosts()
         {
-            Console.WriteLine("I n l ä g g   i   G ä s t b o k e n: ");
-            foreach(Post p in this.posts)
+            Console.WriteLine("\n\n I n l ä g g   i   G ä s t b o k e n: ");
+            int i = 0; //Räknare
+            foreach(Post p in posts)
             {
-                Console.WriteLine("ID: " + p.getId() + " FÖRFATTARE: " + p.getAuthorName() + " TEXT: " + p.getPostText());
+                string aName = p.getAuthorName();
+                string pText = p.getPostText();
+                Console.WriteLine("ID: " + i++ + " FÖRFATTARE: " + aName + " TEXT: " + pText);
             }
             return true;
         }
 
-        public bool newPost(Post post)
+        public Post newPost(string name, string post)
         {
-            var id = posts.Count() + 1;
-            post.setId(id);
-            posts.Add(post);
-            Console.WriteLine("Listan är sparad");
+            Post newP = new Post(name, post); //Skapa det nya inlägget
+
+            posts.Add(newP); //Lägg till inlägget i listan med inlägg
+
             saveGuestbook(); //Spara gästboken
-            return true;
+            return newP;
         }
         public bool DeletePost(int id)
         {
-            Console.WriteLine("I deletepost-funktionen");
+            posts.RemoveAt(id); //Ta bort inlägg med valt index
+            saveGuestbook(); //Spara gästboken
             return true;
+        }
+
+        public List<Post> getPosts()
+        {
+            return posts;
         }
     }
 }

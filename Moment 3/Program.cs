@@ -19,10 +19,12 @@ namespace Moment_3
             while (exit == false) //Kör loopen så länge inte användaren vill avsluta programmet
             {
                 Guestbook myGuestbook = new Guestbook("marcusGuestbook.json"); //Instansiera Guestbook och öppna marcusGuestbook.json
-                Post myPost = new Post();
+                //Post myPost = new Post("", "");
                 string? pressedKey = ""; //string? för att hantera felmeddelande om possible null
                 Console.WriteLine("MARCUS GÄSTBOK!");
                 Console.WriteLine("\n \n Meny: \n\t[1] Skriv ett nytt inlägg\n\t[2] Ta bort ett inlägg \n \n\t[X] Avsluta programmet");
+
+                myGuestbook.printPosts();
 
                 pressedKey = Console.ReadLine();
                 
@@ -35,31 +37,25 @@ namespace Moment_3
                         string authorName = Console.ReadLine();
                         Console.WriteLine("Skriv ditt inlägg: ");
                         string postText = Console.ReadLine();
+                        Console.Clear();
 
                         //Kontrollera Input
-                        if(!String.IsNullOrEmpty(authorName) && !String.IsNullOrEmpty(postText))
+                        if (!String.IsNullOrEmpty(authorName) && !String.IsNullOrEmpty(postText))
                         {
-                            myPost.setAuthorName(authorName);
-                            myPost.setPostText(postText);
-
-                            myGuestbook.newPost(myPost);
+                            myGuestbook.newPost(authorName, postText); //Skapa nytt inlägg
                         }
-
-                        //Spara inlägg och visa meddelande om det ELLER skriv ut felmeddelande
+                        else
+                        {
+                            Console.WriteLine("Fel: du måste fylla i både namn och text");
+                        }
 
                     break;
 
                     case "2": //Ta bort inlägg
-                        Console.Clear(); //Rensa skärmen
-
-                        //Skriv ut alla inlägg för att visa Index
-
-                        //Fråga efter Input om valt Index
-
-                        //Kontrollera input
-
-                        //Radera valt index eller skriv ut felmeddelande
-
+                        Console.WriteLine("Vilket inlägg vill du ta bort? (Ange siffra)");
+                        int idToDelete = Convert.ToInt32(Console.ReadLine()); //Läs in text och konvertera till int
+                        myGuestbook.DeletePost(idToDelete);
+                        Console.Clear();
 
                     break;
                     case "x": //Avsluta, oavsett om anv. skriver litet x eller X
@@ -73,7 +69,7 @@ namespace Moment_3
                     break;
                 }
 
-                myGuestbook.printPosts();
+                
             }
         }
     }

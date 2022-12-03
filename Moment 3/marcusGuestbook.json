@@ -1,17 +1,1 @@
-﻿[
-  {
-    "id": 0,
-    "authorName": "Marcus Andersson",
-    "postText": "Lorem ipsum blablabla och så vidare 1."
-  },
-  {
-    "id": 1,
-    "authorName": "Anders Marcusson",
-    "postText": "Lorem blablabla ipsum blablabla och 2 så vidare."
-  },
-  {
-    "id": 2,
-    "authorName": "Marcus Andersson",
-    "postText": "Lorem 3 ipsum blablabla och så blabla vidare."
-  }
-]
+[{"authorName":"Marcus Andersson","postText":"Detta \u00E4r ett exempelinl\u00E4gg."},{"authorName":"Marcus","postText":"\u00C4ntligen fungerar det h\u00E4r programmet, efter mycket m\u00F6da, slit och besv\u00E4r. "},{"authorName":"Marcus Andersson","postText":"Detta \u00E4r ett tredje inl\u00E4gg i denna fantastiska G\u00E4stbok!"}]

@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Moment_3
 {
     internal class Post
     {
-        private int id; //Medlemsvariabler för att lagra info för posten
-        private string authorName;
-        private string postText;
+        //Medlemsvariabler för att lagra info för posten
+        public string authorName { get; set; } //public + {get; set; } För att få Json-deserialization att fungera 
+        public string postText { get; set; }
 
-        public void setId(int id)
+        public Post(string authorName, string postText) //Constructor
         {
-            this.id = id;
+            this.authorName = authorName;
+            this.postText = postText;
         }
 
         public void setAuthorName(string authorName)
@@ -26,11 +28,7 @@ namespace Moment_3
         {
             this.postText = text;
         }
-        public int getId() //Get-funktioner för att returnera värdet av medlemsvariablerna
-        {
-            return this.id;
-        }
-
+       //Get-funktioner för att returnera värdet av medlemsvariablerna
         public string getAuthorName()
         {
             return this.authorName;
