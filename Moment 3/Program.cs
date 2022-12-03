@@ -53,9 +53,21 @@ namespace Moment_3
 
                     case "2": //Ta bort inlägg
                         Console.WriteLine("Vilket inlägg vill du ta bort? (Ange siffra)");
-                        int idToDelete = Convert.ToInt32(Console.ReadLine()); //Läs in text och konvertera till int
-                        myGuestbook.DeletePost(idToDelete);
-                        Console.Clear();
+                        string input = Console.ReadLine();
+
+                        Console.Clear(); //Rensa skärmen efter val
+
+                        if (!String.IsNullOrEmpty(input)) //Om strängen ej är tom
+                        {
+                            int idToDelete = Convert.ToInt32(input); //Läs in text och konvertera till int
+                            myGuestbook.DeletePost(idToDelete);
+                        }
+                        else //Om strängen är tom
+                        {
+                            Console.WriteLine("Fel: Du kan inte lämna valet tomt!");
+                        }
+                        
+                        
 
                     break;
                     case "x": //Avsluta, oavsett om anv. skriver litet x eller X
